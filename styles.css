@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-board {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    background-color: #ddd;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .card:hover{
+    border-color: green;
+  }
+  
+  .card.flipped {
+    background-color: rgb(107, 225, 107);
+    color: #fff;
+  }
+  body header .fejlec  {
+    display: flex;
+    background: rgb(85, 227, 85);
+    height: 120px;
+    width: 100%vw;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.fejlec p {
+    font-size: xx-large;
+    background: rgb(85, 227, 85);
+}
+html {
+  margin: 0;
+  border: none;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+.jatekAblak {
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+}
+section .reklamAblak {
+  background:linear-gradient(black,grey);
+  width: 200px;
+  height: 60vw;
+  margin: 30px;
+}
+.jatekAblak {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 60vw;
+  margin: 30px;
+}
+.jatekAblak h1 {
+  font-weight: 900;
+  font-size: xx-large;
+  
+  font-style: italic;
+  background: -webkit-linear-gradient(#2ee725, #78d173);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px dotted;
+  border-radius: 10px;
+  padding: 10px;
+}
