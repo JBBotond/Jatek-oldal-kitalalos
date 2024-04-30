@@ -2,12 +2,13 @@ const symbols=['🍎', '🍊', '🍇', '🍉', '🍌', '🍓', '🍍', '🥭'];
 let cards=[];
 let flippedCards=[];
 let matchedCards=[];
-let resetButton=document.createElement("button");
-let congrBox=document.createElement("div");
+const resetButton=document.querySelector('.resetButton');
+const congrBox=document.querySelector('.congrBox');
 const gameBoard=document.getElementById('game-board');
 const unnepKep = document.querySelector('#unnepKep');
 
 function initializeGame(){
+  congrBox.style.visibility = 'hidden';
   unnepKep.style.visibility = 'hidden';
   cards=[...symbols, ...symbols];
   cards.sort(()=>Math.random()-0.5);
@@ -44,15 +45,10 @@ function checkMatch(){
   if (cards[cardIndex1]===cards[cardIndex2]) {
     matchedCards.push(cardIndex1, cardIndex2);
     if (true) { ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      congrBox.textContent="Congratulations, you win!\nReset game?";
-      congrBox.style.backgroundColor="Green";
-      congrBox.style.marginBottom='1rem';
-      congrBox.style.marginTop='1rem';
-      document.body.appendChild(congrBox);
-      resetButton.style.borderRadius='20px';
+      congrBox.style.visibility = 'visible';
+      unnepKep.style.visibility = 'visible';
       resetButton.textContent="Reset";
       resetButton.addEventListener('click', restartGame);
-      document.body.appendChild(resetButton);
       unnepKep.style.visibility = 'visible';
       
     }
@@ -67,12 +63,13 @@ function checkMatch(){
 }
 
 function restartGame() {
-  resetButton.remove();
-  congrBox.remove();
+  congrBox.style.visibility = 'hidden';
+  unnepKep.style.visibility = 'hidden';
   gameBoard.innerHTML='';
   flippedCards=[];
   matchedCards=[];
   initializeGame();
 }
-
+congrBox.style.visibility = 'hidden';
+unnepKep.style.visibility = 'hidden';
 initializeGame();
