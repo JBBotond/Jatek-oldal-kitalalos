@@ -44,7 +44,7 @@ function checkMatch(){
 
   if (cards[cardIndex1]===cards[cardIndex2]) {
     matchedCards.push(cardIndex1, cardIndex2);
-    if (matchedCards.length===cards.length) { ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    if (true) { ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       congrBox.style.visibility = 'visible';
       unnepKep.style.visibility = 'visible';
       resetButton.textContent="Reset";
